@@ -14,6 +14,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Toaster } from "@/components/ui/sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Checkbox } from "@/components/ui/checkbox";
 import heroImg from "@/assets/hero-students.jpg";
 import campusImg from "@/assets/campus.jpg";
 
@@ -71,11 +72,16 @@ const testimonials = [
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "", email: "", course: "" });
+  const [consent, setConsent] = useState(true);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.phone || !form.email || !form.course) {
       toast.error("Please fill in all fields");
+      return;
+    }
+    if (!consent) {
+      toast.error("Please accept the communication consent to continue");
       return;
     }
     toast.success("Thanks! Our counselor will contact you shortly.");
@@ -390,6 +396,16 @@ function Index() {
                     </SelectContent>
                   </Select>
                 </div>
+                <label className="flex items-start gap-3 rounded-lg border border-border bg-muted/30 p-3">
+                  <Checkbox
+                    checked={consent}
+                    onCheckedChange={(v) => setConsent(v === true)}
+                    className="mt-0.5"
+                  />
+                  <span className="text-xs leading-relaxed text-muted-foreground">
+                    I sign up to receive promotional, transactional notifications on SMS, mails and WhatsApp messages.
+                  </span>
+                </label>
                 <Button type="submit" size="lg" className="w-full bg-[image:var(--gradient-hero)] shadow-[var(--shadow-soft)] hover:opacity-90">
                   Submit Application <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>

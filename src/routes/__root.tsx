@@ -33,10 +33,14 @@ export const Route = createRootRoute({
       { name: "description", content: "Education Mentor helps students secure admissions in India's top universities for Engineering, MBA, Pharmacy and more. Free counseling available." },
       { name: "author", content: "Education Mentor" },
       { property: "og:title", content: "Education Mentor — Your Gateway to Top Universities" },
-      { property: "og:description", content: "Expert admission counseling for India's top universities. Engineering, MBA, Pharmacy & more." },
+      { property: "og:description", content: "Education Mentor helps students secure admissions in India's top universities for Engineering, MBA, Pharmacy and more. Free counseling available." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Education Mentor — Your Gateway to Top Universities" },
+      { name: "twitter:description", content: "Education Mentor helps students secure admissions in India's top universities for Engineering, MBA, Pharmacy and more. Free counseling available." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/efce328e-d4d8-4d9d-bf3f-c96ce92991b9/id-preview-857f73ed--3b6c9308-dcb5-4ee4-9d59-97345701f65e.lovable.app-1777998015945.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/efce328e-d4d8-4d9d-bf3f-c96ce92991b9/id-preview-857f73ed--3b6c9308-dcb5-4ee4-9d59-97345701f65e.lovable.app-1777998015945.png" },
     ],
     links: [
       {

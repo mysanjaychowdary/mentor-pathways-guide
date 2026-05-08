@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { toast } from "sonner";
 import {
@@ -12,8 +12,6 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Toaster } from "@/components/ui/sonner";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Checkbox } from "@/components/ui/checkbox";
 import heroImg from "@/assets/hero-students.jpg";
 import campusImg from "@/assets/campus.jpg";
@@ -441,58 +439,10 @@ function Index() {
             <h4 className="text-sm font-semibold">Legal</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <Dialog>
-                  <DialogTrigger className="text-muted-foreground hover:text-primary">Privacy Policy</DialogTrigger>
-                  <DialogContent className="max-w-2xl">
-                    <DialogHeader><DialogTitle>Privacy Policy</DialogTitle></DialogHeader>
-                    <ScrollArea className="max-h-[60vh] pr-4">
-                      <div className="space-y-4 text-sm text-muted-foreground">
-                        <p>Last updated: {new Date().toLocaleDateString()}</p>
-                        <p>Education Mentor ("we", "us", "our") respects your privacy and is committed to protecting the personal information you share with us through our website and counseling services.</p>
-                        <h4 className="font-semibold text-foreground">Information We Collect</h4>
-                        <p>We collect information you provide directly to us, such as your name, phone number, email address and course of interest, when you submit our enquiry form or request counseling.</p>
-                        <h4 className="font-semibold text-foreground">How We Use Your Information</h4>
-                        <p>Your information is used solely to respond to your enquiry, provide admission counseling, share details about partner universities, and follow up regarding your application. We do not sell your data to third parties.</p>
-                        <h4 className="font-semibold text-foreground">Data Sharing</h4>
-                        <p>We may share your details with the partner universities you express interest in, strictly for the purpose of facilitating your admission process.</p>
-                        <h4 className="font-semibold text-foreground">Data Security</h4>
-                        <p>We implement reasonable safeguards to protect your information from unauthorized access, alteration, or disclosure.</p>
-                        <h4 className="font-semibold text-foreground">Your Rights</h4>
-                        <p>You may request access to, correction of, or deletion of your personal data at any time by writing to hello@educationmentor.in.</p>
-                        <h4 className="font-semibold text-foreground">Contact</h4>
-                        <p>For any privacy-related questions, please contact us at hello@educationmentor.in.</p>
-                      </div>
-                    </ScrollArea>
-                  </DialogContent>
-                </Dialog>
+                <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link>
               </li>
               <li>
-                <Dialog>
-                  <DialogTrigger className="text-muted-foreground hover:text-primary">Terms &amp; Conditions</DialogTrigger>
-                  <DialogContent className="max-w-2xl">
-                    <DialogHeader><DialogTitle>Terms &amp; Conditions</DialogTitle></DialogHeader>
-                    <ScrollArea className="max-h-[60vh] pr-4">
-                      <div className="space-y-4 text-sm text-muted-foreground">
-                        <p>Last updated: {new Date().toLocaleDateString()}</p>
-                        <p>By accessing or using the Education Mentor website and services, you agree to be bound by the following terms and conditions.</p>
-                        <h4 className="font-semibold text-foreground">Use of Services</h4>
-                        <p>Our counseling and admission guidance services are intended to assist students in choosing and applying to universities. Final admission decisions rest solely with the respective universities.</p>
-                        <h4 className="font-semibold text-foreground">Accuracy of Information</h4>
-                        <p>You agree to provide accurate, current and complete information when submitting enquiries or applications. We are not responsible for issues arising from incorrect information provided by you.</p>
-                        <h4 className="font-semibold text-foreground">No Guarantee</h4>
-                        <p>While we strive to provide the best guidance, we do not guarantee admission, scholarships, or specific outcomes from any university.</p>
-                        <h4 className="font-semibold text-foreground">Intellectual Property</h4>
-                        <p>All content, logos, graphics and material on this website are the property of Education Mentor and may not be reproduced without prior written consent.</p>
-                        <h4 className="font-semibold text-foreground">Limitation of Liability</h4>
-                        <p>Education Mentor shall not be liable for any indirect, incidental or consequential damages arising from the use of our website or services.</p>
-                        <h4 className="font-semibold text-foreground">Changes to Terms</h4>
-                        <p>We reserve the right to update these terms at any time. Continued use of our services after changes constitutes acceptance of the revised terms.</p>
-                        <h4 className="font-semibold text-foreground">Contact</h4>
-                        <p>For questions regarding these terms, contact us at hello@educationmentor.in.</p>
-                      </div>
-                    </ScrollArea>
-                  </DialogContent>
-                </Dialog>
+                <Link to="/terms-and-conditions" className="text-muted-foreground hover:text-primary">Terms &amp; Conditions</Link>
               </li>
             </ul>
           </div>

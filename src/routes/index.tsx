@@ -452,7 +452,7 @@ function Index() {
             <div>© {new Date().getFullYear()} Education Mentor. All rights reserved.</div>
             <div>
               Powered by{" "}
-              <span className="font-semibold text-foreground">NAK CONSULTANCY SERVICES</span>
+              <span className="font-semibold text-foreground">VINAYAKA IMPACTS</span>
             </div>
           </div>
         </div>

@@ -78,7 +78,7 @@ function TermsAndConditions() {
       <footer className="border-t border-border bg-muted/30">
         <div className="container mx-auto flex flex-col items-center justify-between gap-2 px-4 py-5 text-center text-xs text-muted-foreground md:flex-row md:px-6">
           <div>© {new Date().getFullYear()} Education Mentor. All rights reserved.</div>
-          <div>Powered by <span className="font-semibold text-foreground">NAK CONSULTANCY SERVICES</span></div>
+          <div>Powered by <span className="font-semibold text-foreground">VINAYAKA IMPACTS</span></div>
         </div>
       </footer>
     </div>
